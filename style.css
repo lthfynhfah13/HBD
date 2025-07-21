@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to top right, #44e8fd, #fd58e2, #2cff61);
+  font-family: Algerian, cursive, sans-serif;
+  text-align: center;
+  height: auto;
+  overflow-y: auto;
+}
+
+.container {
+  margin-top: 30px;
+  color: #333;
+}
+
+.message {
+  margin: 50px auto;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  animation-fill-mode: both;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  background-color: #b20af5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #ff3e6c;
+}
+
+.fade-in-up {
+  animation: fadeInUp 8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 20;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.balloons {
+  position: absolute;
+  bottom: -200px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.balloon {
+  width: 40px;
+  height: 60px;
+  background: radial-gradient(circle, #f0b6ff 40%, #b028ff);
+  border-radius: 50% 50% 50% 50%;
+  position: absolute;
+  left: calc(20% * var(--i));
+  animation: floatUp 6s ease-in-out infinite;
+}
+
+@keyframes floatUp {
+  0% {
+    bottom: -100px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 110%;
+    opacity: 0;
+  }
+}
+
